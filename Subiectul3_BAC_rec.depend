@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1774290338 source:c:\mycode\subiectul3_bac_rec\main.cpp
+	<iostream>
+	<fstream>
+	<string.h>
+	"varianta68.h"
+
+1774287225 c:\mycode\subiectul3_bac_rec\varianta67.h
+	<iostream>
+	<fstream>
+	<string.h>
+
+1774291945 c:\mycode\subiectul3_bac_rec\varianta68.h
+	<iostream>
+	<fstream>
+	<string.h>
+

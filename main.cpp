@@ -1,9 +1,13 @@
-#include <iostream>
 
+#include <iostream>
+#include <fstream>
+#include <string.h>
+#include "varianta68.h"
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    SUB2();
+
     return 0;
 }
