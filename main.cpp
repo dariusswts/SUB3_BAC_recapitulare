@@ -2,12 +2,12 @@
 #include <iostream>
 #include <fstream>
 #include <string.h>
-#include "varianta68.h"
+#include "varianta69.h"
 using namespace std;
 
 int main()
 {
-    SUB2();
+    cout<<calcul(92465);
 
     return 0;
 }

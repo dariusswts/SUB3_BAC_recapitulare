@@ -33,6 +33,13 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
+		<Unit filename="numere.txt" />
+		<Unit filename="varianta67.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="varianta68.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
