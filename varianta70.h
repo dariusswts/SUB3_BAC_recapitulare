@@ -59,38 +59,66 @@ NUMERE.TXT are conţinutul
 alăturat,
 8
 711 711 711 11111 11111 11111 191111 231111
+atunci programul va afişa pe ecran 711 3.
 */
 
-void rezolvare4(){
+void rezolvareVectorFrecventa(){
     ifstream f("numere.txt");
     int n,x;
     f>>n;
-    int val,cnt,maxVal,maxCnt;
-    f>>val;
-    cnt=1;
-    maxVal=val;
-    maxCnt=1;
-    for(int i=1;i<=n;i++){
+    int frec[100000]{};
+    cout<<n<<endl;
+    for(int i=0;i<n;i++){
         f>>x;
-        if(x==val){
-            cnt++;
-        }
-        else{
-            if(cnt>maxCnt){
-                maxCnt=cnt;
-                maxVal=val;
-            }
-            if(cnt==maxCnt&&val<maxVal){
-                maxVal=val;
-            }
-            val=x;
-            cnt=1;
+        frec[x]++;
+        cout<<x<<endl;
+    }
+    for(int i=0;i<100000;i++){
+        if(frec[i]>0){
+            cout<<i<<"apare de "<<frec[i]<<endl;
         }
     }
-    cout<<maxVal<<" "<<maxCnt;
+    int maxCT=0,maxVal=0;
+    for(int i=0;i<=10000;i++){
+        if(frec[i]>maxCT){
+            maxCT=frec[i];
+            maxVal=i;
+        }
+    }
+    cout<<endl;
+    cout<<maxVal<< " "<<maxCT;
+
+
 
 }
 
+void altModel(){
+   ifstream f("numere.txt");
+   int n,x;
+   int v[100000];
+   f>>n;
+   for(int i=0;i<n;i++){
+        f>>v[i];
+   }
+   int maxCT=0,maxVal=v[0];
+
+   for(int i=0;i<n-1;i++){
+       int val=v[i];
+          int ct=1;
+       if(v[i]==v[i+1]){
+          while(v[i]==v[i+1]){
+            ct++;
+            i++;
+          }
+          if(maxCT<ct){
+             maxCT=ct;
+             maxVal=val;
+          }
+          i--;
+       }
+   }
+   cout<<maxVal<<" "<<maxCT;
+}
 
 
 
